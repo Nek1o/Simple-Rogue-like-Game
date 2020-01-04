@@ -29,15 +29,15 @@ MenuUI::MenuUI() {
 	setFont(this->font);
 
 	choices[0]->setText("Start");
-	choices[0]->setPosition(350, 290);
+	choices[0]->setPosition(350, 350);
 	//choices[0]->choose();
 	setActiveChoiceItem(0);
 
 	choices[1]->setText("About");
-	choices[1]->setPosition(350, 370);
+	choices[1]->setPosition(350, choices[0]->getPosY() + 80);
 
 	choices[2]->setText("Quit");
-	choices[2]->setPosition(350, 450);
+	choices[2]->setPosition(350, choices[1]->getPosY() + 80);
 }
 
 MenuUI::~MenuUI() {

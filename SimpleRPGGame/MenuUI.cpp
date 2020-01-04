@@ -8,8 +8,8 @@ MenuUI::MenuUI() {
 	gameName->setCharacterSize(50);
 
 	this->font = new sf::Font();
-	this->font->loadFromFile("C:\\Users\\Nikita\\source\\repos\\SimpleRPGGame\\Debug\\Resources\\Fonts\\ARCADECLASSIC.ttf");
-
+	//this->font->loadFromFile("C:\\Users\\Nikita\\source\\repos\\SimpleRPGGame\\Debug\\Resources\\Fonts\\ARCADECLASSIC.ttf");
+	this->font->loadFromFile("Resources/Fonts/ARCADECLASSIC.ttf");
 	MenuUI::choices = std::vector<ChoiceItemUI*>();
 	for (size_t i = 0; i < 3; i++) {
 		ChoiceItemUI* choiceItemUI = new ChoiceItemUI();
@@ -32,7 +32,8 @@ MenuUI::MenuUI() {
 
 	std::string* pathToCampfire = new std::string();
 
-	*pathToCampfire = "C:\\Users\\Nikita\\source\\repos\\SimpleRPGGame\\Debug\\Resources\\Textures\\campfire\\";
+	//*pathToCampfire = "C:\\Users\\Nikita\\source\\repos\\SimpleRPGGame\\Debug\\Resources\\Textures\\campfire\\";
+	*pathToCampfire = "Resources/Textures/campfire/";
 	campfire = new Animation(pathToCampfire);
 	campfire->setFramesInAnimation(8);
 	campfire->setTimeToSkip(5);

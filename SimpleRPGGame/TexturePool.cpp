@@ -62,7 +62,7 @@ TexturePool::~TexturePool() {
 
 // Метод поместить в конструктор
 void TexturePool::loadWeakMonsterTextures() {
-	std::string pathString = "\\Resources\\Textures\\w";
+	std::string pathString = "Resources/Textures/w";
 	std::string pngString = ".png";
 
 	for (size_t i = 1; i <= WEAK_MONSTER_AMOUNT; i++) {

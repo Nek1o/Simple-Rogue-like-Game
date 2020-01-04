@@ -9,13 +9,16 @@ MenuUI::MenuUI() {
 	this->font = new sf::Font();
 	this->font->loadFromFile("C:\\Users\\Nikita\\source\\repos\\SimpleRPGGame\\Debug\\Resources\\Fonts\\ARCADECLASSIC.ttf");
 
-	cursor = new sf::Sprite();
+	/*cursor = new sf::Sprite();
 	cursor->setPosition(250, 100);
 	sf::Texture* cursorTexture = new sf::Texture();
 	sf::Image* cursorImage = new sf::Image();
 	cursorImage->loadFromFile("C:\\Users\\Nikita\\source\\repos\\SimpleRPGGame\\Debug\\Resources\\Textures\\cursor.png");
 	cursorTexture->loadFromImage(*cursorImage);
-	cursor->setTexture(*cursorTexture);
+	cursor->setTexture(*cursorTexture);*/
+
+	cursor = new MenuUICursor();
+
 
 	MenuUI::choices = std::vector<ChoiceItemUI*>();
 	for (size_t i = 0; i < 3; i++) {
@@ -26,14 +29,15 @@ MenuUI::MenuUI() {
 	setFont(this->font);
 
 	choices[0]->setText("Start");
-	choices[0]->setPosition(350, 100);
-	choices[0]->choose();
+	choices[0]->setPosition(350, 290);
+	//choices[0]->choose();
+	setActiveChoiceItem(0);
 
 	choices[1]->setText("About");
-	choices[1]->setPosition(350, 200);
+	choices[1]->setPosition(350, 370);
 
 	choices[2]->setText("Quit");
-	choices[2]->setPosition(350, 300);
+	choices[2]->setPosition(350, 450);
 }
 
 MenuUI::~MenuUI() {
@@ -42,6 +46,7 @@ MenuUI::~MenuUI() {
 	}
 	delete gameName;
 	delete font;
+	delete cursor;
 }
 
 ActiveChoiceItem MenuUI::getActiveChoiceItem() {
@@ -69,7 +74,7 @@ void MenuUI::setActiveChoiceItem(int n) {
 void MenuUI::setCursorPosition() {
 	for (auto& choice : choices) {
 		if (choice->isChosen()) {
-			cursor->setPosition(choice->getPosX() - 100, choice->getPosY());
+			cursor->setPosition(cursor->getPosX(), choice->getPosY() + 10);
 		}
 	}
 }
@@ -88,5 +93,6 @@ void MenuUI::draw(sf::RenderWindow* window) {
 	}
 
 	window->draw(*gameName);
-	window->draw(*cursor);
+	cursor->draw(window);
+	/*window->draw(*cursor);*/
 }

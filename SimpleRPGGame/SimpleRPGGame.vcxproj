@@ -23,6 +23,7 @@
     <ProjectGuid>{6FE52C5F-3117-4C90-8C45-4F95E7E71A95}</ProjectGuid>
     <RootNamespace>SimpleRPGGame</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <ProjectName>Simple-Rogue-like-Game</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -130,6 +131,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MenuUI.cpp" />
     <ClCompile Include="MenuUIController.cpp" />
+    <ClCompile Include="MenuUICursor.cpp" />
     <ClCompile Include="TexturePool.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +151,7 @@
     <ClInclude Include="ItemWeapon.hpp" />
     <ClInclude Include="MenuUI.hpp" />
     <ClInclude Include="MenuUIController.hpp" />
+    <ClInclude Include="MenuUICursor.hpp" />
     <ClInclude Include="Player.hpp" />
     <ClInclude Include="StrongMonster.hpp" />
     <ClInclude Include="TexturePool.hpp" />

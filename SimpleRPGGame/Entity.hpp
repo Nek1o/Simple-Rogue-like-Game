@@ -3,8 +3,8 @@
 
 class Entity {
 private:
-	int posX;
-	int posY;
+	double posX;
+	double posY;
 	sf::Image* image;
 	sf::Texture* texture;
 	sf::Sprite* sprite;
@@ -14,13 +14,13 @@ public:
 
 	virtual ~Entity();
 
-	void setPosX(int);
+	virtual void setPosX(double);
 
-	void setPosY(int);
+	virtual void setPosY(double);
 
-	virtual int getPosX();
+	virtual double getPosX();
 
-	virtual int getPosY();
+	virtual double getPosY();
 
 	void setImage(sf::Image*);
 

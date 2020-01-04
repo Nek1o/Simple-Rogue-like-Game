@@ -12,8 +12,8 @@ int main() {
 	sf::RenderWindow window(sf::VideoMode(800, 600), "Dungeon Escape");
 	MenuUIController* menuUIController = new MenuUIController();
 	bool isMenuDone = false;
-
-	/*TexturePool texturePool = TexturePool();
+	window.setFramerateLimit(60);
+	/*TexturePool texturePool = TexturePool(); 
 	texturePool.loadWeakMonsterTextures();
 	sf::Sprite weakMonsterSprite(*texturePool.getWeakMonsterTexture(2));*/
 

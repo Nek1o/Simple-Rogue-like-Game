@@ -57,6 +57,9 @@
     <ClCompile Include="MenuUIController.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="MenuUICursor.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.hpp">
@@ -120,6 +123,9 @@
       <Filter>Файлы заголовков\Entity\UI</Filter>
     </ClInclude>
     <ClInclude Include="MenuUIController.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuUICursor.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

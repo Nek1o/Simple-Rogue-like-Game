@@ -33,7 +33,6 @@ TexturePool::~TexturePool() {
 	for (auto& i : weaponTextures) {
 		delete i;
 	}
-
 	for (auto& i : shieldTextures) {
 		delete i;
 	}

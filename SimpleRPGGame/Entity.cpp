@@ -10,19 +10,19 @@ Entity::~Entity() {
 
 }
 
-void Entity::setPosX(int x) {
+void Entity::setPosX(double x) {
 	posX = x;
 }
 
-void Entity::setPosY(int y) {
+void Entity::setPosY(double y) {
 	posY = y;
 }
 
-int Entity::getPosX() {
+double Entity::getPosX() {
 	return posX;
 }
 
-int Entity::getPosY() {
+double Entity::getPosY() {
 	return posY;
 }
 

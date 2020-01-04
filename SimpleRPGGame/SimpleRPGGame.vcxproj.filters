@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков\Entity">
+      <UniqueIdentifier>{8e6e3530-f514-439a-a82d-e5340f84db94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Entity\CombatEntity">
+      <UniqueIdentifier>{36d59bb5-1d3e-46a0-8586-79bdbc58b618}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Entity\Effect">
+      <UniqueIdentifier>{4a548569-51fc-410e-acc9-47fcda474211}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Entity\Effect\PotionEffect">
+      <UniqueIdentifier>{5e7567bc-1c87-44c0-9705-cfab2e5567a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Entity\Item">
+      <UniqueIdentifier>{764cea1f-8de8-4d85-a9a0-d3f364d3ffcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Entity\Item\Potion">
+      <UniqueIdentifier>{3d38f91a-4e39-4486-a141-c5ebbaf9568c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Entity\Item\Weapon">
+      <UniqueIdentifier>{ef6ff126-41f2-4058-8396-62ca17ef8454}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Entity\UI">
+      <UniqueIdentifier>{642a2668-4c56-4e00-91ff-a95d3e4e8d88}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="TexturePool.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="ChoiceItemUI.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuUI.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuUIController.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="CombatEntity.hpp">
+      <Filter>Файлы заголовков\Entity\CombatEntity</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.hpp">
+      <Filter>Файлы заголовков\Entity\CombatEntity</Filter>
+    </ClInclude>
+    <ClInclude Include="FirePotion.hpp">
+      <Filter>Файлы заголовков\Entity\Item\Potion</Filter>
+    </ClInclude>
+    <ClInclude Include="HealingPotion.hpp">
+      <Filter>Файлы заголовков\Entity\Item\Potion</Filter>
+    </ClInclude>
+    <ClInclude Include="FreezingPotion.hpp">
+      <Filter>Файлы заголовков\Entity\Item\Potion</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemPotion.hpp">
+      <Filter>Файлы заголовков\Entity\Item\Potion</Filter>
+    </ClInclude>
+    <ClInclude Include="Effect.hpp">
+      <Filter>Файлы заголовков\Entity\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.hpp">
+      <Filter>Файлы заголовков\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="FirePotionEffect.hpp">
+      <Filter>Файлы заголовков\Entity\Effect\PotionEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="HealingPotionEffect.hpp">
+      <Filter>Файлы заголовков\Entity\Effect\PotionEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="FreezingPotionEffect.hpp">
+      <Filter>Файлы заголовков\Entity\Effect\PotionEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemWeapon.hpp">
+      <Filter>Файлы заголовков\Entity\Item\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemEntity.hpp">
+      <Filter>Файлы заголовков\Entity\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="WeakMonster.hpp">
+      <Filter>Файлы заголовков\Entity\CombatEntity</Filter>
+    </ClInclude>
+    <ClInclude Include="StrongMonster.hpp">
+      <Filter>Файлы заголовков\Entity\CombatEntity</Filter>
+    </ClInclude>
+    <ClInclude Include="TexturePool.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.hpp">
+      <Filter>Файлы заголовков\Entity\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ChoiceItemUI.hpp">
+      <Filter>Файлы заголовков\Entity\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuUI.hpp">
+      <Filter>Файлы заголовков\Entity\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuUIController.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

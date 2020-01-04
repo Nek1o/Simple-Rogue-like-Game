@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\nikita\source\repos\simplerpggame\simplerpggame\</FILEPATH>
+      <FILENAME>ui.hpp</FILENAME>
+      <LINE>10</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'UI::font' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>UI::{ctor}</FUNCTION>
+    <DECORATED>??0UI@@QAE@XZ</DECORATED>
+    <FUNCLINE>10</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\sfml-2.5.1\include\sfml\graphics\</FILEPATH>
+      <FILENAME>text.hpp</FILENAME>
+      <LINE>452</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'sf::Text::m_characterSize' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>sf::Text::{ctor}</FUNCTION>
+    <DECORATED>??0Text@sf@@QAE@ABV01@@Z</DECORATED>
+    <FUNCLINE>452</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\sfml-2.5.1\include\sfml\graphics\</FILEPATH>
+      <FILENAME>transformable.hpp</FILENAME>
+      <LINE>327</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'sf::Transformable::m_inverseTransformNeedUpdate' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>sf::Transformable::{ctor}</FUNCTION>
+    <DECORATED>??0Transformable@sf@@QAE@ABV01@@Z</DECORATED>
+    <FUNCLINE>327</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\sfml-2.5.1\include\sfml\graphics\</FILEPATH>
+      <FILENAME>vertexarray.hpp</FILENAME>
+      <LINE>192</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'sf::VertexArray::m_primitiveType' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>sf::VertexArray::{ctor}</FUNCTION>
+    <DECORATED>??0VertexArray@sf@@QAE@ABV01@@Z</DECORATED>
+    <FUNCLINE>192</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\nikita\source\repos\simplerpggame\simplerpggame\</FILEPATH>
+      <FILENAME>entity.cpp</FILENAME>
+      <LINE>4</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Entity::texture' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Entity::{ctor}</FUNCTION>
+    <DECORATED>??0Entity@@QAE@XZ</DECORATED>
+    <FUNCLINE>4</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\nikita\source\repos\simplerpggame\simplerpggame\</FILEPATH>
+      <FILENAME>menuui.cpp</FILENAME>
+      <LINE>3</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'MenuUI::gameName' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>MenuUI::{ctor}</FUNCTION>
+    <DECORATED>??0MenuUI@@QAE@XZ</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT></DEFECTS>

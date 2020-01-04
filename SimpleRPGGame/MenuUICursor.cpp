@@ -36,7 +36,7 @@ MenuUICursor::MenuUICursor(ChoiceItemUI* choiceItem) {
 	sf::Texture* cursorTexture = new sf::Texture();
 	sf::Sprite* cursorSprite = new sf::Sprite();
 
-	cursorImage->loadFromFile("C:\\Users\\Nikita\\source\\repos\\SimpleRPGGame\\Debug\\Resources\\Textures\\cursor.png");
+	cursorImage->loadFromFile("Resources/Textures/cursor.png");
 	cursorTexture->loadFromImage(*cursorImage);
 	cursorSprite->setTexture(*cursorTexture);
 

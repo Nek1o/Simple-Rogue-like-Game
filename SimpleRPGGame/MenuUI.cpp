@@ -1,4 +1,5 @@
 #include "MenuUI.hpp"
+#include "Animation.hpp"
 
 MenuUI::MenuUI() {
 	gameName = new sf::Text();
@@ -8,17 +9,6 @@ MenuUI::MenuUI() {
 
 	this->font = new sf::Font();
 	this->font->loadFromFile("C:\\Users\\Nikita\\source\\repos\\SimpleRPGGame\\Debug\\Resources\\Fonts\\ARCADECLASSIC.ttf");
-
-	/*cursor = new sf::Sprite();
-	cursor->setPosition(250, 100);
-	sf::Texture* cursorTexture = new sf::Texture();
-	sf::Image* cursorImage = new sf::Image();
-	cursorImage->loadFromFile("C:\\Users\\Nikita\\source\\repos\\SimpleRPGGame\\Debug\\Resources\\Textures\\cursor.png");
-	cursorTexture->loadFromImage(*cursorImage);
-	cursor->setTexture(*cursorTexture);*/
-
-	cursor = new MenuUICursor();
-
 
 	MenuUI::choices = std::vector<ChoiceItemUI*>();
 	for (size_t i = 0; i < 3; i++) {
@@ -30,14 +20,25 @@ MenuUI::MenuUI() {
 
 	choices[0]->setText("Start");
 	choices[0]->setPosition(350, 350);
-	//choices[0]->choose();
-	setActiveChoiceItem(0);
 
 	choices[1]->setText("About");
 	choices[1]->setPosition(350, choices[0]->getPosY() + 80);
 
 	choices[2]->setText("Quit");
 	choices[2]->setPosition(350, choices[1]->getPosY() + 80);
+
+	cursor = new MenuUICursor(choices[0]);
+	setActiveChoiceItem(0);
+
+	std::string* pathToCampfire = new std::string();
+
+	*pathToCampfire = "C:\\Users\\Nikita\\source\\repos\\SimpleRPGGame\\Debug\\Resources\\Textures\\campfire\\";
+	campfire = new Animation(pathToCampfire);
+	campfire->setFramesInAnimation(8);
+	campfire->setTimeToSkip(5);
+
+	campfire->setPosition(245, 0);
+	campfire->setScale(1.15, 1.15);
 }
 
 MenuUI::~MenuUI() {
@@ -91,8 +92,7 @@ void MenuUI::draw(sf::RenderWindow* window) {
 	for (auto& choice : choices) {
 		choice->draw(window);
 	}
-
 	window->draw(*gameName);
 	cursor->draw(window);
-	/*window->draw(*cursor);*/
+	campfire->draw(window);
 }

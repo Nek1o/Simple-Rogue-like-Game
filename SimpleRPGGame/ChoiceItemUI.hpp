@@ -25,6 +25,6 @@ public:
 
 	void draw(sf::RenderWindow*);
 
-	void setPosition(int, int);
+	void setPosition(double, double);
 
 };

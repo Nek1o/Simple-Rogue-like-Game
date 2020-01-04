@@ -1,5 +1,6 @@
 #pragma once
 #include "UI.hpp"
+#include "ChoiceItemUI.hpp"
 
 class MenuUICursor : public UI {
 protected:
@@ -11,6 +12,8 @@ protected:
 
 public:
 	MenuUICursor();
+
+	MenuUICursor(ChoiceItemUI*);
 	
 	~MenuUICursor();
 

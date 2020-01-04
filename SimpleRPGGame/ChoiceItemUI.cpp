@@ -37,7 +37,7 @@ void ChoiceItemUI::draw(sf::RenderWindow* window) {
 	window->draw(*text);
 }
 
-void ChoiceItemUI::setPosition(int x, int y) {
+void ChoiceItemUI::setPosition(double x, double y) {
 	setPosX(x);
 	setPosY(y);
 	text->setPosition(x, y);

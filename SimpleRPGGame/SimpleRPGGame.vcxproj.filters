@@ -37,6 +37,12 @@
     <Filter Include="Файлы заголовков\Entity\UI">
       <UniqueIdentifier>{642a2668-4c56-4e00-91ff-a95d3e4e8d88}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\UI">
+      <UniqueIdentifier>{f5e0c08d-f45e-4eb9-a382-a7ebfbe8d475}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Entity">
+      <UniqueIdentifier>{3d494fd3-8dc1-4b2a-bba2-265e27e35590}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -45,19 +51,22 @@
     <ClCompile Include="TexturePool.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Entity.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="ChoiceItemUI.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuUI.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="MenuUIController.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="ChoiceItemUI.cpp">
+      <Filter>Исходные файлы\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuUI.cpp">
+      <Filter>Исходные файлы\UI</Filter>
+    </ClCompile>
     <ClCompile Include="MenuUICursor.cpp">
+      <Filter>Исходные файлы\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Исходные файлы\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -126,6 +135,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="MenuUICursor.hpp">
+      <Filter>Файлы заголовков\Entity\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

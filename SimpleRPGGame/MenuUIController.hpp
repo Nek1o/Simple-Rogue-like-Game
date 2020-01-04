@@ -12,6 +12,4 @@ public:
 	~MenuUIController();
 
 	bool menu(sf::RenderWindow*);
-
-
 };

@@ -2,6 +2,7 @@
 #include "UI.hpp"
 #include "ChoiceItemUI.hpp"
 #include "MenuUICursor.hpp"
+#include "Animation.hpp"
 
 enum ActiveChoiceItem {
 	Start = 0, About = 1,  Quit = 2
@@ -12,7 +13,7 @@ protected:
 	sf::Text* gameName;
 	MenuUICursor* cursor;
 	std::vector<ChoiceItemUI*> choices;
-
+	Animation* campfire;
 
 public:
 	MenuUI();

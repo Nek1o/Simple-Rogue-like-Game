@@ -1,22 +1,16 @@
 #include <iostream>
-//#include <Windows.h>
 #include <SFML/Graphics.hpp>
 
 #include "TexturePool.hpp"
 #include "MenuUIController.hpp"
+#include "Game.hpp"
 
 int main() {
-	/*HWND hWnd = GetConsoleWindow();
-	ShowWindow(hWnd, SW_HIDE);*/
-	//FreeConsole();
+	
 	sf::RenderWindow window(sf::VideoMode(800, 600), "Dungeon Escape");
-	MenuUIController* menuUIController = new MenuUIController();
-	bool isMenuDone = false;
 	window.setFramerateLimit(60); 
-	/*TexturePool texturePool = TexturePool(); 
-	texturePool.loadWeakMonsterTextures();
-	sf::Sprite weakMonsterSprite(*texturePool.getWeakMonsterTexture(2));*/
-
+	Game* game = new Game();
+	GameState* state = new GameState();
 	while (window.isOpen()) {
 		sf::Event event;
 		while (window.pollEvent(event)) {
@@ -25,13 +19,15 @@ int main() {
 			}
 		}
 
-		if (!isMenuDone) {
-			isMenuDone = menuUIController->menu(&window);
-		}
+		game->start(&window, state);
 
 		window.clear();
 		//window.draw(weakMonsterSprite);
 		window.display();
+		if (state->getCurrentState() == GameAction::Quit) {
+			window.close();
+			break;
+		}
 	}
 
 

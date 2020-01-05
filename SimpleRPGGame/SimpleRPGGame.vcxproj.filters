@@ -43,6 +43,12 @@
     <Filter Include="Исходные файлы\Entity">
       <UniqueIdentifier>{3d494fd3-8dc1-4b2a-bba2-265e27e35590}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\Animation">
+      <UniqueIdentifier>{bdb491fb-b00e-4366-8e99-e7f92dc68151}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Animation">
+      <UniqueIdentifier>{687f5735-6f48-476e-a488-352a47b19a88}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -66,7 +72,19 @@
     <ClCompile Include="Entity.cpp">
       <Filter>Исходные файлы\Entity</Filter>
     </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
     <ClCompile Include="Animation.cpp">
+      <Filter>Исходные файлы\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CombatEntity.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -137,7 +155,16 @@
     <ClInclude Include="MenuUICursor.hpp">
       <Filter>Файлы заголовков\Entity\UI</Filter>
     </ClInclude>
+    <ClInclude Include="GameAction.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
     <ClInclude Include="Animation.hpp">
+      <Filter>Файлы заголовков\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMenuFrame.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

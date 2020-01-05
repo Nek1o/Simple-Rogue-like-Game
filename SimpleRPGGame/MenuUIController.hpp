@@ -1,5 +1,6 @@
 #pragma once
 #include "MenuUI.hpp"
+#include "GameState.hpp"
 
 class MenuUIController {
 protected:
@@ -11,5 +12,5 @@ public:
 
 	~MenuUIController();
 
-	bool menu(sf::RenderWindow*);
+	void menu(sf::RenderWindow*, GameState*);
 };

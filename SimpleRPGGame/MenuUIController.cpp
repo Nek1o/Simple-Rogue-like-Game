@@ -1,4 +1,6 @@
 #include "MenuUIController.hpp"
+#include "GameAction.hpp"
+
 #include <iostream>
 
 MenuUIController::MenuUIController() {
@@ -13,7 +15,10 @@ MenuUIController::~MenuUIController() {
 	delete menuUI;
 }
 
-bool MenuUIController::menu(sf::RenderWindow* window) {
+
+// пусть возвращает перечисление GameAction
+// переделать после того, как остальной функционал будет готов
+void MenuUIController::menu(sf::RenderWindow* window, GameState* state) {
 	int choiceNumber = 0;
 	bool exitingFlag = true;
 	while (exitingFlag) {
@@ -36,16 +41,18 @@ bool MenuUIController::menu(sf::RenderWindow* window) {
 					menuUI->setActiveChoiceItem(choiceNumber);
 				}
 				if (event->key.code == sf::Keyboard::Key::Enter) {
-					if (menuUI->getActiveChoiceItem() == ActiveChoiceItem::Start) {
+					if (menuUI->getActiveChoiceItem() == ActiveChoiceItem::StartChoiceItem) {
 						exitingFlag = false;
+						state->clearStates();
 						break;
 					}
-					if (menuUI->getActiveChoiceItem() == ActiveChoiceItem::Quit) {
+					if (menuUI->getActiveChoiceItem() == ActiveChoiceItem::QuitChoiceItem) {
 						window->close();
 						exitingFlag = false;
+						state->setToQuit();
 						break;
 					}
-					if (menuUI->getActiveChoiceItem() == ActiveChoiceItem::About) {
+					if (menuUI->getActiveChoiceItem() == ActiveChoiceItem::AboutChoiceItem) {
 						// Сделать тут вывод о нас
 					}
 				}
@@ -55,5 +62,4 @@ bool MenuUIController::menu(sf::RenderWindow* window) {
 		menuUI->draw(window);
 		window->display();
 	}
-	return true;
 }

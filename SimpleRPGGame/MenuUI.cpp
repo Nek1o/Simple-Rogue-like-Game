@@ -8,7 +8,6 @@ MenuUI::MenuUI() {
 	gameName->setCharacterSize(50);
 
 	this->font = new sf::Font();
-	//this->font->loadFromFile("C:\\Users\\Nikita\\source\\repos\\SimpleRPGGame\\Debug\\Resources\\Fonts\\ARCADECLASSIC.ttf");
 	this->font->loadFromFile("Resources/Fonts/ARCADECLASSIC.ttf");
 	MenuUI::choices = std::vector<ChoiceItemUI*>();
 	for (size_t i = 0; i < 3; i++) {
@@ -32,7 +31,6 @@ MenuUI::MenuUI() {
 
 	std::string* pathToCampfire = new std::string();
 
-	//*pathToCampfire = "C:\\Users\\Nikita\\source\\repos\\SimpleRPGGame\\Debug\\Resources\\Textures\\campfire\\";
 	*pathToCampfire = "Resources/Textures/campfire/";
 	campfire = new Animation(pathToCampfire);
 	campfire->setFramesInAnimation(8);
@@ -54,13 +52,13 @@ MenuUI::~MenuUI() {
 ActiveChoiceItem MenuUI::getActiveChoiceItem() {
 	for (size_t i = 0; i < 3; i++) {
 		if (choices[i]->isChosen() && i == 0) {
-			return ActiveChoiceItem::Start;
+			return ActiveChoiceItem::StartChoiceItem;
 		}
 		if (choices[i]->isChosen() && i == 1) {
-			return ActiveChoiceItem::About;
+			return ActiveChoiceItem::AboutChoiceItem;
 		}
 		if (choices[i]->isChosen() && i == 2) {
-			return ActiveChoiceItem::Quit;
+			return ActiveChoiceItem::QuitChoiceItem;
 		}
 	}
 }

@@ -5,7 +5,7 @@
 #include "Animation.hpp"
 
 enum ActiveChoiceItem {
-	Start = 0, About = 1,  Quit = 2
+	StartChoiceItem = 0, AboutChoiceItem = 1,  QuitChoiceItem = 2
 };
 
 class MenuUI : public UI {

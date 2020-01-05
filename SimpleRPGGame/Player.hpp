@@ -11,14 +11,11 @@ protected:
 	int exp;
 
 public:
-	// констуркторы в cpp
-	Player() : CombatEntity(), exp(0) {};
+	Player();
 
-	void usePotion();
+	~Player();
 
-	void chooseWeapon();
-
-	void chooseShield();
+	void useItem();
 
 	void draw(sf::RenderWindow*);
 };

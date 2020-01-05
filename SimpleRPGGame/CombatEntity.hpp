@@ -7,10 +7,21 @@ protected:
 	int attackValue;
 	int defenseValue;
 public:
-	// конструкторы в cpp
-	CombatEntity() : Entity(), hp(0), attackValue(0), defenseValue(0) {};
-	CombatEntity(int hp, int attackValue, int defenseValue) : 
-		hp(hp), attackValue(attackValue), defenseValue(defenseValue) {};
+	CombatEntity();
+
+	CombatEntity(int, int, int);
+
+	int getHP();
+
+	void setHP(int);
+
+	int getAttackValue();
+
+	void setAttackValue(int);
+
+	int getDefenseValue();
+
+	void setDefenseValue(int);
 
 	void attack(CombatEntity*);
 

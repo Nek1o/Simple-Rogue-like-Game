@@ -128,11 +128,15 @@
   <ItemGroup>
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="ChoiceItemUI.cpp" />
+    <ClCompile Include="CombatEntity.cpp" />
     <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameState.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MenuUI.cpp" />
     <ClCompile Include="MenuUIController.cpp" />
     <ClCompile Include="MenuUICursor.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="TexturePool.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +150,9 @@
     <ClInclude Include="FreezingPotion.hpp" />
     <ClInclude Include="FreezingPotionEffect.hpp" />
     <ClInclude Include="Game.hpp" />
+    <ClInclude Include="GameAction.hpp" />
+    <ClInclude Include="GameMenuFrame.hpp" />
+    <ClInclude Include="GameState.hpp" />
     <ClInclude Include="HealingPotion.hpp" />
     <ClInclude Include="HealingPotionEffect.hpp" />
     <ClInclude Include="ItemEntity.hpp" />

@@ -1,5 +1,6 @@
 #include "MenuUI.hpp"
 #include "Animation.hpp"
+#include <iostream>
 
 MenuUI::MenuUI() {
 	gameName = new sf::Text();
@@ -9,6 +10,7 @@ MenuUI::MenuUI() {
 
 	this->font = new sf::Font();
 	this->font->loadFromFile("Resources/Fonts/ARCADECLASSIC.ttf");
+
 	MenuUI::choices = std::vector<ChoiceItemUI*>();
 	for (size_t i = 0; i < 3; i++) {
 		ChoiceItemUI* choiceItemUI = new ChoiceItemUI();
@@ -32,8 +34,7 @@ MenuUI::MenuUI() {
 	std::string* pathToCampfire = new std::string();
 
 	*pathToCampfire = "Resources/Textures/campfire/";
-	campfire = new Animation(pathToCampfire);
-	campfire->setFramesInAnimation(8);
+	campfire = new Animation(pathToCampfire, 9);
 	campfire->setTimeToSkip(5);
 
 	campfire->setPosition(245, 0);
@@ -47,18 +48,14 @@ MenuUI::~MenuUI() {
 	delete gameName;
 	delete font;
 	delete cursor;
+	delete campfire;
+	std::cout << "MenuUI destructor" << std::endl;
 }
 
 ActiveChoiceItem MenuUI::getActiveChoiceItem() {
-	for (size_t i = 0; i < 3; i++) {
-		if (choices[i]->isChosen() && i == 0) {
-			return ActiveChoiceItem::StartChoiceItem;
-		}
-		if (choices[i]->isChosen() && i == 1) {
-			return ActiveChoiceItem::AboutChoiceItem;
-		}
-		if (choices[i]->isChosen() && i == 2) {
-			return ActiveChoiceItem::QuitChoiceItem;
+	for (size_t i = 0; i < choices.size(); i++) {
+		if (choices[i]->isChosen()) {
+			return (ActiveChoiceItem)i;
 		}
 	}
 }

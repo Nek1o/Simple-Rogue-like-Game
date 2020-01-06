@@ -13,7 +13,7 @@ protected:
 	std::string* pathToFrames;
 
 public:
-	Animation(std::string*);
+	Animation(std::string*, int);
 
 	~Animation();
 

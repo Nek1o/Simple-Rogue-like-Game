@@ -2,10 +2,19 @@
 
 GameState::GameState() {
 	states = new std::vector<bool>();
-	for (size_t i = 0; i < 9; i++) {
+	for (size_t i = 0; i < 10; i++) {
 		states->push_back(false);
 	}
 }
+//template <class T>
+//bool GameState::is(T t) {
+//	return states->at(t);
+//}
+//
+//template <class T>
+//void GameState::set(T t) {
+//	states->at(t) = true;
+//}
 
 bool GameState::isBattle() {
 	return states->at(GameAction::Battle);
@@ -25,6 +34,10 @@ bool GameState::isSkip() {
 
 bool GameState::isQuit() {
 	return states->at(GameAction::Quit);
+}
+
+bool GameState::isStartGame() {
+	return states->at(GameAction::StartGame);
 }
 
 void GameState::setToBattle() {
@@ -53,6 +66,13 @@ void GameState::setToFindItem() {
 		states->at(i) = false;
 	}
 	states->at(GameAction::FindItem) = true;
+}
+
+void GameState::setToStartGame() {
+	for (size_t i = 0; i < states->size(); i++) {
+		states->at(i) = false;
+	}
+	states->at(GameAction::StartGame) = true;
 }
 
 GameAction GameState::getCurrentState() {

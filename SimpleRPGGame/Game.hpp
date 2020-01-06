@@ -7,9 +7,10 @@ class Game {
 private:
 	int turns;
 	int turnsToWin;
+	GameState* state;
 
 public:
-	void start(sf::RenderWindow*, GameState*);
+	void start(sf::RenderWindow*);
 
 	bool menu(sf::RenderWindow*);
 

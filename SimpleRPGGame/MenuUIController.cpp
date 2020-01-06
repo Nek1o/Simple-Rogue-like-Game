@@ -43,16 +43,18 @@ void MenuUIController::menu(sf::RenderWindow* window, GameState* state) {
 				if (event->key.code == sf::Keyboard::Key::Enter) {
 					if (menuUI->getActiveChoiceItem() == ActiveChoiceItem::StartChoiceItem) {
 						exitingFlag = false;
-						state->clearStates();
+						state->setToStartGame();
 						break;
 					}
 					if (menuUI->getActiveChoiceItem() == ActiveChoiceItem::QuitChoiceItem) {
-						window->close();
+						//window->close();
 						exitingFlag = false;
 						state->setToQuit();
 						break;
 					}
 					if (menuUI->getActiveChoiceItem() == ActiveChoiceItem::AboutChoiceItem) {
+						//state->setToAbout
+
 						// —делать тут вывод о нас
 					}
 				}

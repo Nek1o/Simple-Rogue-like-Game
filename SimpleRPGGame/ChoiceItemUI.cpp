@@ -1,4 +1,5 @@
 #include "ChoiceItemUI.hpp"
+#include <iostream>
 
 ChoiceItemUI::ChoiceItemUI() {
 	chosen = false;
@@ -6,7 +7,8 @@ ChoiceItemUI::ChoiceItemUI() {
 }
 
 ChoiceItemUI::~ChoiceItemUI() {
-	text->setCharacterSize(5);
+	std::cout << "ChoiceItemUIDestructor" << std::endl;
+	delete text;
 }
 
 void ChoiceItemUI::setText(const std::string text) {

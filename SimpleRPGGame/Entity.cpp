@@ -1,9 +1,10 @@
 #include "Entity.hpp"
-
+#include <iostream>
 
 Entity::Entity() : posX(0), posY(0) {};
 
 Entity::~Entity() {
+	std::cout << "Entity destructor" << std::endl;
 	delete image;
 	delete texture;
 	delete sprite;

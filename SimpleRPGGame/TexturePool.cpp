@@ -70,10 +70,6 @@ void TexturePool::loadWeakMonsterTextures() {
 		texture->loadFromFile(pathString + std::to_string(i) + pngString);
 		weakMonsterTextures.push_back(texture);
 	}
-
-	/*Texture *texture = new Texture();
-	texture->loadFromFile("C:\\Users\\Nikita\\Desktop\\Textures\\w3.png");
-	weakMonsterTextures.push_back(texture);*/
 }
 
 Texture* TexturePool::getWeakMonsterTexture() {

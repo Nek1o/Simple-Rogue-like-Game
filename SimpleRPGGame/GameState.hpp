@@ -25,6 +25,8 @@ public:
 
 	bool isQuit();
 
+	bool isStartGame();
+
 	void setToMenu();
 
 	void setToBattle();
@@ -35,7 +37,15 @@ public:
 
 	void setToQuit();
 
+	void setToStartGame();
+
 	GameAction getCurrentState();
 
 	void clearStates();
+
+	/*template <class T>
+	bool is(T t);
+
+	template <class T>
+	void set(T t);*/
 };

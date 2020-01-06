@@ -1,25 +1,22 @@
-#include "MenuUICursor.hpp"
-#include "ChoiceItemUI.hpp"
-#include <iostream>
+#include "GameUICursor.hpp"
 
-
-MenuUICursor::MenuUICursor() {
+GameUICursor::GameUICursor() {
 	sf::Image* cursorImage = new sf::Image();
 	sf::Texture* cursorTexture = new sf::Texture();
 	sf::Sprite* cursorSprite = new sf::Sprite();
 
-	cursorImage->loadFromFile("Resources/Textures/MenuCursor.png");
+	cursorImage->loadFromFile("Resources/Textures/GameCursor.png");
 	cursorTexture->loadFromImage(*cursorImage);
 	cursorSprite->setTexture(*cursorTexture);
-	
+
 	// сделать положение зависимым от vector<ChoiceItemUI>
 
-	shiftValue = 5.5;
-	setPosX(290);
-	setPosY(350);
+	shiftValue = 1;
+	setPosX(290); // ?
+	setPosY(350); // ?
 
-	rightBoundary = getPosX() + 20;
-	leftBoundary = getPosX() - 20;
+	rightBoundary = getPosX() + 10;
+	leftBoundary = getPosX() - 10;
 
 	ToTheLeft = true;
 	toTheRight = false;
@@ -31,23 +28,24 @@ MenuUICursor::MenuUICursor() {
 	setSprite(cursorSprite);
 }
 
-MenuUICursor::MenuUICursor(ChoiceItemUI* choiceItem) {
+GameUICursor::GameUICursor(ChoiceItemUI* choiceItem) {
 	sf::Image* cursorImage = new sf::Image();
 	sf::Texture* cursorTexture = new sf::Texture();
 	sf::Sprite* cursorSprite = new sf::Sprite();
 
-	cursorImage->loadFromFile("Resources/Textures/MenuCursor.png");
+	cursorImage->loadFromFile("Resources/Textures/GameCursor.png");
+	cursorImage->createMaskFromColor(sf::Color(0, 0, 0, 0));
 	cursorTexture->loadFromImage(*cursorImage);
 	cursorSprite->setTexture(*cursorTexture);
 
 	// сделать положение зависимым от vector<ChoiceItemUI>
 
-	shiftValue = 5.5;
-	setPosX(choiceItem->getPosX() - 60);
+	shiftValue = 1;
+	setPosX(choiceItem->getPosX() - 20);
 	setPosY(choiceItem->getPosY());
 
-	rightBoundary = getPosX() + 20;
-	leftBoundary = getPosX() - 20;
+	rightBoundary = getPosX() + 10;
+	leftBoundary = getPosX() - 10;
 
 	ToTheLeft = true;
 	toTheRight = false;
@@ -59,16 +57,14 @@ MenuUICursor::MenuUICursor(ChoiceItemUI* choiceItem) {
 	setSprite(cursorSprite);
 }
 
-MenuUICursor::~MenuUICursor() {
-	std::cout << "cursor Destructor" << std::endl;
-}
+GameUICursor::~GameUICursor() {}
 
-void MenuUICursor::draw(sf::RenderWindow* window) {
+void GameUICursor::draw(sf::RenderWindow* window) {
 	if (ToTheLeft) {
 		setPosition(getPosX() - shiftValue, getPosY());
 		shiftValue -= (shiftValue / 100) * 12.5;
 		if (getPosX() <= leftBoundary) {
-			shiftValue = 5.5;
+			shiftValue = 2.5;
 			toTheRight = true;
 			ToTheLeft = false;
 		}
@@ -77,7 +73,7 @@ void MenuUICursor::draw(sf::RenderWindow* window) {
 		setPosition(getPosX() + shiftValue, getPosY());
 		shiftValue -= (shiftValue / 100) * 12.5;
 		if (getPosX() >= rightBoundary) {
-			shiftValue = 5.5;
+			shiftValue = 2.5;
 			toTheRight = false;
 			ToTheLeft = true;
 		}
@@ -85,4 +81,4 @@ void MenuUICursor::draw(sf::RenderWindow* window) {
 	window->draw(*getSprite());
 }
 
-void MenuUICursor::setFont(sf::Font* font) {}
+void GameUICursor::setFont(sf::Font* font) {}

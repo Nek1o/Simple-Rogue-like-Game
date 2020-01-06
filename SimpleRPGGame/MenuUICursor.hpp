@@ -1,8 +1,9 @@
 #pragma once
-#include "UI.hpp"
+#include "UICursor.hpp"
 #include "ChoiceItemUI.hpp"
 
-class MenuUICursor : public UI {
+
+class MenuUICursor : public UICursor {
 protected:
 	double shiftValue;
 	double rightBoundary;
@@ -16,10 +17,6 @@ public:
 	MenuUICursor(ChoiceItemUI*);
 	
 	~MenuUICursor();
-
-	void setPosition(double, double);
-
-	void setShiftValue(double);
 
 	void draw(sf::RenderWindow*);
 

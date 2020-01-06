@@ -1,11 +1,12 @@
 #include "Animation.hpp"
+#include <iostream>
 
-Animation::Animation(std::string* pathToFrames) {
+Animation::Animation(std::string* pathToFrames, int framesInAnimation) {
+	this->framesInAnimation = framesInAnimation;
 	timeToSkip = 0;
 	currentFrame = 0;
-	framesInAnimation = 0;
 	currentTimeToSkip = 0;
-	for (size_t i = 0; i < 8; i++) {
+	for (size_t i = 0; i < framesInAnimation; i++) {
 		sf::Image* image = new sf::Image();
 		images.push_back(image);
 
@@ -15,7 +16,7 @@ Animation::Animation(std::string* pathToFrames) {
 		sf::Sprite* sprite = new sf::Sprite();
 		sprites.push_back(sprite);
 	}
-	for (size_t i = 0; i < 8; i++) {
+	for (size_t i = 0; i < framesInAnimation; i++) {
 		images[i]->loadFromFile(*pathToFrames + std::to_string(i) + ".gif");
 		textures[i]->loadFromImage(*images[i]);
 		sprites[i]->setTexture(*textures[i]);
@@ -23,6 +24,7 @@ Animation::Animation(std::string* pathToFrames) {
 }
 
 Animation::~Animation() {
+	std::cout << "Animation" << std::endl;
 	for (auto& image : images) {
 		delete image;
 	}
@@ -56,7 +58,7 @@ void Animation::draw(sf::RenderWindow* window) {
 		currentFrame++;
 	}
 	currentTimeToSkip++;
-	currentFrame %= framesInAnimation;
+	currentFrame %= framesInAnimation - 1;
 	currentTimeToSkip %= timeToSkip;
 	window->draw(*sprites[currentFrame]);
 }

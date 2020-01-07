@@ -18,6 +18,7 @@ Animation::Animation(std::string* pathToFrames, int framesInAnimation) {
 	}
 	for (size_t i = 0; i < framesInAnimation; i++) {
 		images[i]->loadFromFile(*pathToFrames + std::to_string(i) + ".gif");
+		images[i]->createMaskFromColor(sf::Color(0, 0, 0, 255));
 		textures[i]->loadFromImage(*images[i]);
 		sprites[i]->setTexture(*textures[i]);
 	}
@@ -41,7 +42,6 @@ void Animation::setPosition(double x, double y) {
 	setPosY(y);
 	for (auto& sprite : sprites) {
 		sprite->setPosition(getPosX(), getPosY());
-		sprite->scale(1.5, 1.5);
 	}
 }
 
@@ -54,13 +54,21 @@ void Animation::setScale(double x, double y) {
 void Animation::draw(sf::RenderWindow* window) {
 	// можно это сделать при помощи времени, можно при помощи переменных
 	// я уже установил лимит в 60 кадров, так что это прокатывает
-	if (currentTimeToSkip % timeToSkip == 0) {
+	if (timeToSkip != 0) {
+		if (currentTimeToSkip % timeToSkip == 0) {
+			currentFrame++;
+		}
+		currentTimeToSkip++;
+		currentFrame %= framesInAnimation;
+		currentTimeToSkip %= timeToSkip;
+		window->draw(*sprites[currentFrame]);
+	}
+	else {
+		currentFrame %= framesInAnimation;
+		window->draw(*sprites[currentFrame]);
 		currentFrame++;
 	}
-	currentTimeToSkip++;
-	currentFrame %= framesInAnimation - 1;
-	currentTimeToSkip %= timeToSkip;
-	window->draw(*sprites[currentFrame]);
+
 }
 
 void Animation::setPathToFrames(std::string* pathToFrames) {

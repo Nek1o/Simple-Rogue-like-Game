@@ -44,3 +44,7 @@ void ChoiceItemUI::setPosition(double x, double y) {
 	setPosY(y);
 	text->setPosition(x, y);
 }
+
+void ChoiceItemUI::setCharacterSize(double n) {
+	text->setCharacterSize(n);
+}

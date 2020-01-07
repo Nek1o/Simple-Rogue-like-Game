@@ -21,6 +21,8 @@ public:
 
 	void unchoose();
 
+	void setCharacterSize(double);
+
 	void setFont(sf::Font*);
 
 	void draw(sf::RenderWindow*);

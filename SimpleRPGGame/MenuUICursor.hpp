@@ -5,11 +5,6 @@
 
 class MenuUICursor : public UICursor {
 protected:
-	double shiftValue;
-	double rightBoundary;
-	double leftBoundary;
-	bool toTheRight;
-	bool ToTheLeft;
 
 public:
 	MenuUICursor();

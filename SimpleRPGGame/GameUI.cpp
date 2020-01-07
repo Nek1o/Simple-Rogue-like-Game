@@ -18,18 +18,18 @@ GameUI::GameUI() {
 	setSprite(tempSprite);
 
 	currentHP = new sf::Text();
-	currentHP->setString("HP"); // должны быть хп игрока
-	currentHP->setPosition(200, 25); // ?
+	currentHP->setString("hp"); // должны быть хп игрока
+	currentHP->setPosition(75, 465); // ?
 	currentHP->setCharacterSize(20); // ?
 
 	currentExp = new sf::Text();
-	currentExp->setString("EXP"); // должны быть exp игрока
-	currentExp->setPosition(200, 25); // ?
+	currentExp->setString("exp"); // должны быть exp игрока
+	currentExp->setPosition(75, 465 + 30); // ?
 	currentExp->setCharacterSize(20); // ?
 
 	exp = new sf::Text();
-	exp->setString("EXP");
-	exp->setPosition(200, 25); // ?
+	exp->setString("exp");
+	exp->setPosition(28, 465 + 30); // ?
 	exp->setCharacterSize(20); // ?
 
 	this->font = new sf::Font();
@@ -38,22 +38,23 @@ GameUI::GameUI() {
 	GameUI::choices = std::vector<ChoiceItemUI*>();
 	for (size_t i = 0; i < 4; i++) {
 		ChoiceItemUI* choiceItemUI = new ChoiceItemUI();
+		choiceItemUI->setCharacterSize(20);
 		choices.push_back(choiceItemUI);
 	}
 
 	setFont(this->font);
 
 	choices[0]->setText("Attack");
-	choices[0]->setPosition(350, 350); // ?
+	choices[0]->setPosition(630, 465); 
 
 	choices[1]->setText("Defend");
-	choices[1]->setPosition(350, choices[0]->getPosY() + 80); // ?
+	choices[1]->setPosition(630, choices[0]->getPosY() + 30);
 
 	choices[2]->setText("Use");
-	choices[2]->setPosition(350, choices[1]->getPosY() + 80); // ?
+	choices[2]->setPosition(630, choices[1]->getPosY() + 30);
 
 	choices[3]->setText("Talk");
-	choices[3]->setPosition(350, choices[2]->getPosY() + 80); // ?
+	choices[3]->setPosition(630, choices[2]->getPosY() + 30);
 
 	cursor = new GameUICursor(choices[0]);
 	setActiveGameChoiceItem(0);
@@ -61,10 +62,10 @@ GameUI::GameUI() {
 	std::string* pathTohpHeart = new std::string();
 
 	*pathTohpHeart = "Resources/Textures/hpHeart/";
-	hpHeart = new Animation(pathTohpHeart, 11);
-	hpHeart->setTimeToSkip(5); // ?
+	hpHeart = new Animation(pathTohpHeart, 12);
+	hpHeart->setTimeToSkip(8); // ?
 
-	hpHeart->setPosition(245, 0); // ?
+	hpHeart->setPosition(32, 467); // ?
 	hpHeart->setScale(1, 1); // ?
 }
 

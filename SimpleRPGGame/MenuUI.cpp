@@ -34,11 +34,11 @@ MenuUI::MenuUI() {
 	std::string* pathToCampfire = new std::string();
 
 	*pathToCampfire = "Resources/Textures/campfire/";
-	campfire = new Animation(pathToCampfire, 9);
+	campfire = new Animation(pathToCampfire, 8);
+	campfire->setScale(1.725, 1.725);
 	campfire->setTimeToSkip(5);
 
 	campfire->setPosition(245, 0);
-	campfire->setScale(1.15, 1.15);
 }
 
 MenuUI::~MenuUI() {

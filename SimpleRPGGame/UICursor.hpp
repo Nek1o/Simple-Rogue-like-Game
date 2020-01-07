@@ -1,6 +1,9 @@
 #pragma once
 #include "UI.hpp"
 #include "ChoiceItemUI.hpp"
+#include "Animation.hpp"
+
+//  TODO отнаследоваться от Animation и исправить всё в draw()
 
 class UICursor : public UI {
 protected:
@@ -9,6 +12,7 @@ protected:
 	double leftBoundary;
 	bool toTheRight;
 	bool ToTheLeft;
+	Animation* animation;
 
 public:
 	UICursor();

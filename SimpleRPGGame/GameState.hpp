@@ -27,6 +27,8 @@ public:
 
 	bool isStartGame();
 
+	bool isToNextTurn();
+
 	void setToMenu();
 
 	void setToBattle();

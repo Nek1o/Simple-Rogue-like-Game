@@ -7,9 +7,7 @@ class MenuUICursor : public UICursor {
 protected:
 
 public:
-	MenuUICursor();
-
-	MenuUICursor(ChoiceItemUI*);
+	MenuUICursor(ChoiceItemUI*, std::string*, int);
 	
 	~MenuUICursor();
 

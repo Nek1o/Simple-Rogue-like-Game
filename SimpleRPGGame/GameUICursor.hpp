@@ -6,9 +6,8 @@ class GameUICursor : public UICursor {
 private:
 
 public:
-	GameUICursor();
 
-	GameUICursor(ChoiceItemUI*);
+	GameUICursor(ChoiceItemUI*, std::string* pathToFrames, int framesInAnimation);
 
 	~GameUICursor();
 

@@ -11,7 +11,7 @@ enum ActiveChoiceItem {
 class MenuUI : public UI {
 protected:
 	sf::Text* gameName;
-	MenuUICursor* cursor;
+	UICursor* cursor;
 	std::vector<ChoiceItemUI*> choices;
 	Animation* campfire;
 

@@ -1,5 +1,4 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: промежуточный каталог (Debug\) содержит файлы, которые используются совместно с другим проектом (SimpleRPGGame.vcxproj).  Это может привести к ошибкам очистки и перестроения.
-  GameUICursor.cpp
-c:\users\nikita\source\repos\simplerpggame\simplerpggame\gameuicursor.cpp(32): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-c:\users\nikita\source\repos\simplerpggame\simplerpggame\gameuicursor.cpp(70): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+  GameUI.cpp
+c:\users\nikita\source\repos\simplerpggame\simplerpggame\gameui.cpp(93): warning C4715: GameUI::getActiveGameChoiceItem: значение возвращается не при всех путях выполнения
   SimpleRPGGame.vcxproj -> C:\Users\Nikita\source\repos\SimpleRPGGame\Debug\Simple-Rogue-like-Game.exe

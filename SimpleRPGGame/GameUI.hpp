@@ -13,7 +13,7 @@ protected:
 	sf::Text* currentHP;
 	sf::Text* exp;
 	sf::Text* currentExp;
-	GameUICursor* cursor;
+	UICursor* cursor;
 	std::vector<ChoiceItemUI*> choices;
 	Animation* hpHeart;
 

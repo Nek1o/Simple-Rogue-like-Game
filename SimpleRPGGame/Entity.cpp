@@ -1,7 +1,11 @@
 #include "Entity.hpp"
 #include <iostream>
 
-Entity::Entity() : posX(0), posY(0) {};
+Entity::Entity() : posX(0), posY(0) {
+	image = new sf::Image();
+	texture = new sf::Texture();
+	sprite = new sf::Sprite();
+};
 
 Entity::~Entity() {
 	std::cout << "Entity destructor" << std::endl;

@@ -68,7 +68,6 @@ void Animation::draw(sf::RenderWindow* window) {
 		window->draw(*sprites[currentFrame]);
 		currentFrame++;
 	}
-
 }
 
 void Animation::setPathToFrames(std::string* pathToFrames) {

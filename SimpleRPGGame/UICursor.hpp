@@ -3,22 +3,21 @@
 #include "ChoiceItemUI.hpp"
 #include "Animation.hpp"
 
-//  TODO отнаследоваться от Animation и исправить всё в draw()
+// убрать все другие классы курсоров и оставить этот ?
 
-class UICursor : public UI {
+class UICursor : public Animation {
 protected:
 	double shiftValue;
+	double tempShiftValue;
+	double accelerationPercents;
 	double rightBoundary;
 	double leftBoundary;
 	bool toTheRight;
 	bool ToTheLeft;
-	Animation* animation;
 
 public:
-	UICursor();
-
-	// для первого пункта, чтобы курсор изначально стоял на нём
-	UICursor(ChoiceItemUI*);
+	// ChoiceItemUI ?
+	UICursor(ChoiceItemUI*, std::string*, int);
 
 	virtual ~UICursor();
 
@@ -26,7 +25,9 @@ public:
 
 	void setShiftValue(double);
 
-	virtual void draw(sf::RenderWindow*) = 0;
+	void setAccelerationPercent(double);
 
-	virtual void setFont(sf::Font*) = 0;
+	void draw(sf::RenderWindow*);
+
+	virtual void setFont(sf::Font*);
 };

@@ -28,7 +28,12 @@ MenuUI::MenuUI() {
 	choices[2]->setText("Quit");
 	choices[2]->setPosition(350, choices[1]->getPosY() + 80);
 
-	cursor = new MenuUICursor(choices[0]);
+	std::string* pathToCursorFrames = new std::string();
+	*pathToCursorFrames = "Resources/Textures/MenuCursor/";
+	cursor = new MenuUICursor(choices[0], pathToCursorFrames, 1);
+	cursor->setShiftValue(5.5);
+	cursor->setAccelerationPercent(12.5);
+	cursor->setTimeToSkip(1);
 	setActiveChoiceItem(0);
 
 	std::string* pathToCampfire = new std::string();

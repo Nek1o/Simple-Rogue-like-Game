@@ -18,7 +18,8 @@ void GameUIController::game(sf::RenderWindow* window, GameState* state) {
 			if (event->type == sf::Event::Closed) {
 				window->close();
 			}
-
+			// Проверяем GameState, в зависимости от него вызываем методы у gameUI
+			// В GameUI сделать методы для врагов и предметов. 
 			// тут вся мошня
 		}
 

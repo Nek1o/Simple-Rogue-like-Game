@@ -2,24 +2,12 @@
 #include "GameUICursor.hpp"
 
 GameUI::GameUI() {
-	sf::Image* tempImage = new sf::Image();
-	sf::Texture* tempTexture = new sf::Texture();
-	sf::Sprite* tempSprite = new sf::Sprite();
-
-	tempImage->loadFromFile("Resources/Textures/GameMenuFrame.png");
-	tempImage->createMaskFromColor(sf::Color(0, 0, 0, 255));
-	
-	tempTexture->loadFromImage(*tempImage);
-
-	tempSprite->setTexture(*tempTexture);
-
-	setImage(tempImage);
-	setTexture(tempTexture);
-	setSprite(tempSprite);
+	gameUIMenuFrame = new GameUIMenuFrame();
 
 	currentHP = new sf::Text();
 	currentHP->setString("hp"); 
 	currentHP->setPosition(75, 465); 
+	currentHP->setCharacterSize(20);
 
 	currentExp = new sf::Text();
 	currentExp->setString("exp"); 
@@ -67,7 +55,7 @@ GameUI::GameUI() {
 
 	*pathTohpHeart = "Resources/Textures/hpHeart/";
 	hpHeart = new Animation(pathTohpHeart, 12);
-	hpHeart->setTimeToSkip(8); 
+	hpHeart->setTimeToSkip(6); 
 
 	hpHeart->setPosition(32, 467); 
 	hpHeart->setScale(1, 1); 
@@ -127,5 +115,5 @@ void GameUI::draw(sf::RenderWindow* window) {
 	window->draw(*exp);
 	cursor->draw(window);
 	hpHeart->draw(window);
-	window->draw(*getSprite());
+	gameUIMenuFrame->draw(window);
 }

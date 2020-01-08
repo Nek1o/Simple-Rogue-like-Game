@@ -135,6 +135,7 @@
     <ClCompile Include="GameUI.cpp" />
     <ClCompile Include="GameUIController.cpp" />
     <ClCompile Include="GameUICursor.cpp" />
+    <ClCompile Include="GameUIMenuFrame.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MenuUI.cpp" />
     <ClCompile Include="MenuUIController.cpp" />
@@ -155,7 +156,7 @@
     <ClInclude Include="FreezingPotionEffect.hpp" />
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="GameAction.hpp" />
-    <ClInclude Include="GameMenuFrame.hpp" />
+    <ClInclude Include="GameUIMenuFrame.hpp" />
     <ClInclude Include="GameState.hpp" />
     <ClInclude Include="GameUI.hpp" />
     <ClInclude Include="GameUIController.hpp" />

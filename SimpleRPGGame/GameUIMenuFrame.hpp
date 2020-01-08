@@ -2,13 +2,15 @@
 #include "UI.hpp"
 #include "Player.hpp"
 
-class GameMenuFrame : public UI {
+// вставить сюда текущий опыт и текущее здоровье
+
+class GameUIMenuFrame : public UI {
 protected:
 	Player* player; // для отображения всех показателей в меню тут тоже будет игрок
 public:
-	GameMenuFrame();
+	GameUIMenuFrame();
 
-	~GameMenuFrame();
+	~GameUIMenuFrame();
 
 	void setFont(sf::Font*);
 

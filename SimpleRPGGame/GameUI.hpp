@@ -3,6 +3,7 @@
 #include "ChoiceItemUI.hpp"
 #include "GameUICursor.hpp"
 #include "Animation.hpp"
+#include "GameUIMenuFrame.hpp"
 
 enum ActiveGameChoiceItem {
 	AttackChoiceItem = 0, DefenseChoiceItem = 1, UseChoiceItem = 2, TalkChoiceItem = 3
@@ -16,7 +17,7 @@ protected:
 	UICursor* cursor;
 	std::vector<ChoiceItemUI*> choices;
 	Animation* hpHeart;
-
+	GameUIMenuFrame* gameUIMenuFrame;
 
 public:
 	GameUI();

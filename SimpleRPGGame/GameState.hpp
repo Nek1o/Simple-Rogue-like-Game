@@ -39,6 +39,8 @@ public:
 
 	void setToStartGame();
 
+	void setToNextTurn();
+
 	GameAction getCurrentState();
 
 	void clearStates();

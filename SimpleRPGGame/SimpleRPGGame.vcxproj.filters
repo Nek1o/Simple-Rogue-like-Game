@@ -49,15 +49,27 @@
     <Filter Include="Исходные файлы\Animation">
       <UniqueIdentifier>{687f5735-6f48-476e-a488-352a47b19a88}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\GameState">
+      <UniqueIdentifier>{60b4a9a8-1ac0-4b35-aff8-b293b94fa1fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\UIControllers">
+      <UniqueIdentifier>{84990cb6-ed9a-4313-99e3-be112b6f427b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Entity\CombatEntity">
+      <UniqueIdentifier>{c867f154-55d8-47ab-acec-124abbf23e65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\GameState">
+      <UniqueIdentifier>{41a9f202-f7ea-4a39-b669-3dfa5f9551ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\UIControllers">
+      <UniqueIdentifier>{7374d0f9-3004-4f34-aa00-bc418fad121b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="TexturePool.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuUIController.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="ChoiceItemUI.cpp">
@@ -81,23 +93,29 @@
     <ClCompile Include="Player.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CombatEntity.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="GameState.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="UICursor.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\UI</Filter>
     </ClCompile>
     <ClCompile Include="GameUICursor.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\UI</Filter>
     </ClCompile>
     <ClCompile Include="GameUI.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>Исходные файлы\GameState</Filter>
     </ClCompile>
     <ClCompile Include="GameUIController.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\UIControllers</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuUIController.cpp">
+      <Filter>Исходные файлы\UIControllers</Filter>
+    </ClCompile>
+    <ClCompile Include="CombatEntity.cpp">
+      <Filter>Исходные файлы\Entity\CombatEntity</Filter>
+    </ClCompile>
+    <ClCompile Include="GameUIMenuFrame.cpp">
+      <Filter>Исходные файлы\UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -161,9 +179,6 @@
     <ClInclude Include="MenuUI.hpp">
       <Filter>Файлы заголовков\Entity\UI</Filter>
     </ClInclude>
-    <ClInclude Include="MenuUIController.hpp">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="MenuUICursor.hpp">
       <Filter>Файлы заголовков\Entity\UI</Filter>
     </ClInclude>
@@ -173,23 +188,26 @@
     <ClInclude Include="Animation.hpp">
       <Filter>Файлы заголовков\Animation</Filter>
     </ClInclude>
-    <ClInclude Include="GameMenuFrame.hpp">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="GameState.hpp">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\GameState</Filter>
     </ClInclude>
     <ClInclude Include="GameUI.hpp">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="GameUICursor.hpp">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Entity\UI</Filter>
     </ClInclude>
     <ClInclude Include="UICursor.hpp">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Entity\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="GameUICursor.hpp">
+      <Filter>Файлы заголовков\Entity\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="GameUIMenuFrame.hpp">
+      <Filter>Файлы заголовков\Entity\UI</Filter>
     </ClInclude>
     <ClInclude Include="GameUIController.hpp">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\UIControllers</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuUIController.hpp">
+      <Filter>Файлы заголовков\UIControllers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

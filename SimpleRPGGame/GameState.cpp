@@ -40,6 +40,10 @@ bool GameState::isStartGame() {
 	return states->at(GameAction::StartGame);
 }
 
+bool GameState::isToNextTurn() {
+	return states->at(GameAction::ToNextTurn);
+}
+
 void GameState::setToBattle() {
 	for (size_t i = 0; i < states->size(); i++) {
 		states->at(i) = false;
@@ -94,4 +98,11 @@ void GameState::setToQuit() {
 		states->at(i) = false;
 	}
 	states->at(GameAction::Quit) = true;
+}
+
+void GameState::setToNextTurn() {
+	for (size_t i = 0; i < states->size(); i++) {
+		states->at(i) = false;
+	}
+	states->at(GameAction::ToNextTurn) = true;
 }

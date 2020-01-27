@@ -30,13 +30,13 @@ void MenuUIController::menu(sf::RenderWindow* window, GameState* state) {
 			if (event->type == sf::Event::KeyPressed) {
 				if (event->key.code == sf::Keyboard::Key::W ||
 					event->key.code == sf::Keyboard::Key::Up) {
-					choiceNumber -= 1;
+					choiceNumber--;
 					choiceNumber = (choiceNumber < 0) ? 2 : choiceNumber;
 					menuUI->setActiveChoiceItem(choiceNumber);
 				}
 				if (event->key.code == sf::Keyboard::Key::S ||
 					event->key.code == sf::Keyboard::Key::Down) {
-					choiceNumber += 1;
+					choiceNumber++;
 					choiceNumber %= 3;
 					menuUI->setActiveChoiceItem(choiceNumber);
 				}

@@ -4,6 +4,7 @@
 GameUI::GameUI() {
 	gameUIMenuFrame = new GameUIMenuFrame();
 
+	// Показатели здоровья и опыта
 	currentHP = new sf::Text();
 	currentHP->setString("hp"); 
 	currentHP->setPosition(75, 465); 
@@ -22,6 +23,7 @@ GameUI::GameUI() {
 	this->font = new sf::Font();
 	this->font->loadFromFile("Resources/Fonts/ARCADECLASSIC.ttf");
 
+	// Пункты для выбора
 	GameUI::choices = std::vector<ChoiceItemUI*>();
 	for (size_t i = 0; i < 4; i++) {
 		ChoiceItemUI* choiceItemUI = new ChoiceItemUI();
@@ -43,6 +45,7 @@ GameUI::GameUI() {
 	choices[3]->setText("Talk");
 	choices[3]->setPosition(630, choices[2]->getPosY() + 30);
 
+	// Курсор
 	std::string* pathToCursorFrames = new std::string();
 	*pathToCursorFrames = "Resources/Textures/GameCursor/";
 	cursor = new GameUICursor(choices[0], pathToCursorFrames, 1);
@@ -51,6 +54,7 @@ GameUI::GameUI() {
 	cursor->setTimeToSkip(2);
 	setActiveGameChoiceItem(0);
 
+	// Анимация сердца
 	std::string* pathTohpHeart = new std::string();
 
 	*pathTohpHeart = "Resources/Textures/hpHeart/";
@@ -59,6 +63,9 @@ GameUI::GameUI() {
 
 	hpHeart->setPosition(32, 467); 
 	hpHeart->setScale(1, 1); 
+
+	// Игрок
+	player = new Player();
 }
 
 GameUI::~GameUI() {
@@ -106,6 +113,18 @@ void GameUI::setFont(sf::Font* font) {
 	exp->setFont(*font);
 }
 
+void GameUI::setEnemy(CombatEntity* combatEntity) {
+	enemy = combatEntity;
+}
+
+void GameUI::attackEnemy() {
+	player->attack(enemy);
+}
+
+void GameUI::defendFromEnemy() {
+	player->defend(enemy);
+}
+
 void GameUI::draw(sf::RenderWindow* window) {
 	for (auto& choice : choices) {
 		choice->draw(window);
@@ -115,5 +134,8 @@ void GameUI::draw(sf::RenderWindow* window) {
 	window->draw(*exp);
 	cursor->draw(window);
 	hpHeart->draw(window);
+	player->draw(window);
+	if (enemy != NULL)
+		enemy->draw(window);
 	gameUIMenuFrame->draw(window);
 }

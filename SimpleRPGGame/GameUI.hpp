@@ -4,6 +4,7 @@
 #include "GameUICursor.hpp"
 #include "Animation.hpp"
 #include "GameUIMenuFrame.hpp"
+#include "CombatEntity.hpp"
 
 enum ActiveGameChoiceItem {
 	AttackChoiceItem = 0, DefenseChoiceItem = 1, UseChoiceItem = 2, TalkChoiceItem = 3
@@ -18,6 +19,8 @@ protected:
 	std::vector<ChoiceItemUI*> choices;
 	Animation* hpHeart;
 	GameUIMenuFrame* gameUIMenuFrame;
+	CombatEntity* player;
+	CombatEntity* enemy;
 
 public:
 	GameUI();
@@ -31,6 +34,12 @@ public:
 	void setFont(sf::Font*);
 
 	void setCursorPosition();
+
+	void setEnemy(CombatEntity*);
+
+	void attackEnemy();
+
+	void defendFromEnemy();
 
 	void draw(sf::RenderWindow*);
 };

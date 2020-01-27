@@ -6,6 +6,7 @@ protected:
 	int hp;
 	int attackValue;
 	int defenseValue;
+	bool hit;
 public:
 	CombatEntity();
 
@@ -28,6 +29,10 @@ public:
 	void defend(CombatEntity*);
 
 	bool isAlive();
+
+	bool isHit();
+
+	void setHit(bool);
 
 	virtual void draw(sf::RenderWindow*) = 0;
 };
